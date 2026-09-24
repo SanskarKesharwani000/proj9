@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+	<head lang="en">
+		<title>Next Page</title>
+	</head>	
+
+	<body>
+		<h1>Next HTML Page</h1>
+		
+		<hr>
+
+		<table border="1" width="50%" align="center">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>College</th>
+					<th>Marks</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<!-- for tranversing every record from the list using th:each=""  -->
+				<tr th:each="user : ${users}">
+					
+					<!-- for getting values of every user from user class. it is replaced by user.getName() internally-->
+					
+					<td th:text="${user.name}">User Name</td>
+					<td th:text="${user.age}">User Age</td>
+					<td th:text="${user.college}">User College</td>
+					<td th:text="${user.marks}">User Marks</td>
+				</tr>
+				
+			</tbody>
+			
+		</table>
+	</body>
+	
+</html>
